@@ -15,7 +15,7 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!value.email || !value.password) {
+    if (!value.email.trim() || !value.password.trim()) {
       alert("Заполните все поля");
     } else {
       console.log(value);
