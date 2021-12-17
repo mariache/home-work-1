@@ -31,6 +31,8 @@ const tabs = [
 const App = () => {
   const [activeId, setActiveId] = useState(1);
 
+  const handleClick = (id) => setActiveId((prev) => (id !== prev ? id : null));
+
   return (
     <div id="app">
       <div className="app-container">
@@ -45,7 +47,7 @@ const App = () => {
             >
               <input id={`tab-${tabContent.id}`} type="checkbox" name="tabs" />
               <label
-                onClick={() => setActiveId(tabContent.id)}
+                onClick={() => handleClick(tabContent.id)}
                 htmlFor={`tab-${tabContent.id}`}
               >
                 {tabContent.title}
