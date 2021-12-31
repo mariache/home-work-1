@@ -1,18 +1,7 @@
-import { getFirstName } from "../../utils";
+import { getFirstName, getFormattedDate } from "../../utils";
 import PropTypes from "prop-types";
 
 const ProfileGreetings = ({ name, registeredAt }) => {
-  const getFormattedDate = (dateToFormat) => {
-    const copiedDate = new Date(dateToFormat);
-    return copiedDate
-      .toLocaleString("ru", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
-      .slice(0, -2);
-  };
-
   return (
     <div>
       <p>
