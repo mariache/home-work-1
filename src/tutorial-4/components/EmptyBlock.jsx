@@ -5,7 +5,10 @@ const emptyListImg = {
   alt: "Ghost",
 };
 
-export const EmptyBlock = () => {
+export const EmptyBlock = ({
+  heading = "Список фраз пустой",
+  secondaryText = "Чтобы в этом списке появилась фраза, тебе необходимо нажать на кнопку `Сгенерировать`",
+}) => {
   return (
     <div className="block empty-block">
       <img
@@ -14,11 +17,8 @@ export const EmptyBlock = () => {
         height="32px"
         alt={emptyListImg.alt}
       />
-      <h2>Список фраз пустой</h2>
-      <p>
-        Чтобы в этом списке появилась фраза, тебе необходимо нажать на кнопку
-        “Сгенерировать”
-      </p>
+      <h2>{heading}</h2>
+      <p>{secondaryText}</p>
     </div>
   );
 };
