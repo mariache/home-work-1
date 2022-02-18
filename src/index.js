@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "../src/tutorial-users-async-await/App";
+import App from "../src/tutorial-github-search/App";
 
 ReactDOM.render(
   <React.StrictMode>
