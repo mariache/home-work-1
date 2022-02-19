@@ -58,7 +58,7 @@ export const UserCard = (props) => {
         </div>
       );
     }
-    return <></>;
+    return null;
   };
 
   return (

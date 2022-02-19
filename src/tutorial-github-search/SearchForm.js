@@ -1,5 +1,4 @@
 import search from "./assets/img/search.svg";
-import { useRef } from "react";
 
 export const SearchForm = ({ searchWord, setSearchWord, getUser, loading }) => {
   const onChange = (event) => {
@@ -13,13 +12,10 @@ export const SearchForm = ({ searchWord, setSearchWord, getUser, loading }) => {
     getUser();
   };
 
-  const inputRef = useRef();
-
   return (
     <form className="app-form">
       <input
         onChange={onChange}
-        ref={inputRef}
         value={searchWord}
         type="text"
         className="app-input"

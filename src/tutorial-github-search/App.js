@@ -17,13 +17,8 @@ export default function App() {
       const response = await axios.get(
         `https://api.github.com/users/${searchWord}`
       );
-      const data = await response.data;
-      if (response.status === 200) {
-        setLoading(false);
-        setUser(data);
-      } else {
-        throw Error("Something went wrong...");
-      }
+      setLoading(false);
+      setUser(response.data);
     } catch (error) {
       setLoading(false);
       console.error(error);
