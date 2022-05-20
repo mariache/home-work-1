@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { FullArticle } from "./components/FullArticle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import { CustomRoute } from "./components/CustomRoute.jsx";
 
 function App() {
   const { pathname } = window.location;
@@ -13,10 +14,10 @@ function App() {
   return (
     <>
       <Header />
-      {pathname === "/" && <Home />}
-      {pathname === "/about" && <About />}
-      {pathname === "/login" && <h1>Логин</h1>}
-      {postId && <FullArticle id={postId} />}
+      <CustomRoute path="/" element={<Home />} exact />
+      <CustomRoute path="/about" element={<About />} />
+      <CustomRoute path="/login" element={<h1>Логин</h1>} />
+      <CustomRoute path="/post/" element={<FullArticle id={postId} />} />
       <Footer />
     </>
   );
